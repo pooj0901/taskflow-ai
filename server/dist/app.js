@@ -7,13 +7,17 @@ const express_1 = __importDefault(require("express"));
 const cors_1 = __importDefault(require("cors"));
 const waitlistRoutes_1 = __importDefault(require("./routes/waitlistRoutes"));
 const app = (0, express_1.default)();
-// Middleware
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-// Routes
+app.get("/", (req, res) => {
+    res.send("TaskFlow AI API is running 🚀");
+});
 app.use('/api/waitlist', waitlistRoutes_1.default);
-// Health check endpoint
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', service: 'TaskFlow AI Backend API', timestamp: new Date().toISOString() });
+    res.json({
+        status: 'ok',
+        service: 'TaskFlow AI Backend API',
+        timestamp: new Date().toISOString()
+    });
 });
 exports.default = app;
