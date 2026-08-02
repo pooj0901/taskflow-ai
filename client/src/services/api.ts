@@ -1,14 +1,15 @@
 import axios from 'axios';
 import { WaitlistFormData, WaitlistEntry, ApiResponse } from '../types/waitlist';
 
-const API_BASE = '/api';
+const API_BASE =
+  import.meta.env.VITE_API_URL ||
+  "https://taskflow-ai-jmqh.onrender.com";
 
 const apiClient = axios.create({
   baseURL: API_BASE,
   headers: {
-    'Content-Type': 'application/json',
+    "Content-Type": "application/json",
   },
-  timeout: 10000,
 });
 
 export const submitWaitlist = async (data: WaitlistFormData): Promise<ApiResponse<WaitlistEntry>> => {
