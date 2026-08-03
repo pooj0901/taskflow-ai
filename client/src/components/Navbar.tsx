@@ -40,7 +40,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, setCurrentView }) =
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
 
-          {/* Logo */}
+        
           <a
             href="#"
             onClick={(e) => {
@@ -67,8 +67,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, setCurrentView }) =
             </div>
           </a>
 
-          {/* Desktop Nav Links */}
-          {currentView === 'landing' && (
+           {currentView === 'landing' && (
             <nav className="hidden md:flex items-center gap-7">
               {navLinks.map((link) => (
                 <a
@@ -82,8 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, setCurrentView }) =
             </nav>
           )}
 
-          {/* Action CTAs & Admin Switcher */}
-          <div className="hidden md:flex items-center gap-3">
+           <div className="hidden md:flex items-center gap-3">
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.97 }}
@@ -118,7 +116,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, setCurrentView }) =
             )}
           </div>
 
-          {/* Mobile Menu Toggle */}
+         
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={() => setCurrentView(currentView === 'landing' ? 'admin' : 'landing')}
@@ -136,7 +134,7 @@ export const Navbar: React.FC<NavbarProps> = ({ currentView, setCurrentView }) =
         </div>
       </div>
 
-      {/* Mobile Drawer */}
+    
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div

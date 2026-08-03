@@ -6,10 +6,10 @@ export const Footer: React.FC = () => {
     <footer className="bg-slate-950 text-slate-400 py-16 border-t border-slate-900">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Top Grid: Logo & 4 Columns */}
+       
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 pb-12 border-b border-slate-900">
           
-          {/* Brand Info */}
+         
           <div className="col-span-2 space-y-4 pr-6">
             <a href="#" className="flex items-center gap-2.5">
               <div className="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-white font-bold text-sm">
@@ -23,7 +23,7 @@ export const Footer: React.FC = () => {
               Autonomous AI-powered project management platform built for high-velocity software engineering and product development teams.
             </p>
 
-            {/* Social Icons */}
+           
             <div className="flex items-center gap-3 pt-2">
               <a href="#" className="w-8 h-8 rounded-lg bg-slate-900 flex items-center justify-center text-slate-400 hover:text-white hover:bg-slate-800 transition-colors">
                 <Github className="w-4 h-4" />
@@ -40,7 +40,7 @@ export const Footer: React.FC = () => {
             </div>
           </div>
 
-          {/* Column 1: Product */}
+       
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">Product</h4>
             <ul className="space-y-2 text-xs">
@@ -52,7 +52,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 2: Resources */}
+       
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">Resources</h4>
             <ul className="space-y-2 text-xs">
@@ -64,7 +64,7 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Column 3: Company */}
+          
           <div className="space-y-3">
             <h4 className="text-xs font-bold text-white uppercase tracking-wider">Company</h4>
             <ul className="space-y-2 text-xs">
@@ -78,7 +78,7 @@ export const Footer: React.FC = () => {
 
         </div>
 
-        {/* Bottom Bar: Copyright & System Status */}
+       
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
           <p>© {new Date().getFullYear()} TaskFlow AI, Inc. All rights reserved.</p>
           <div className="flex items-center gap-2">

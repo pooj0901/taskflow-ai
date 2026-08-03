@@ -127,17 +127,17 @@ export const FinalCTA: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 onSubmit={handleSubmit}
-                className="max-w-lg mx-auto space-y-5 text-left"
+                className="max-w-lg mx-auto space-y-4 sm:space-y-5 text-left"
               >
                 {errorMessage && (
-                  <div className="p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs font-semibold flex items-center gap-2">
+                  <div className="p-3 sm:p-3.5 rounded-xl bg-rose-50 border border-rose-200 text-rose-700 text-xs sm:text-sm font-semibold flex items-center gap-2">
                     <AlertCircle className="w-4 h-4 shrink-0" />
                     <span>{errorMessage}</span>
                   </div>
                 )}
 
                 <div>
-                  <label className="block text-xs font-extrabold text-slate-900 mb-2 uppercase tracking-wider">
+                  <label className="block text-[10px] sm:text-xs font-extrabold text-slate-900 mb-1.5 sm:mb-2 uppercase tracking-wider">
                     Full Name <span className="text-rose-500">*</span>
                   </label>
                   <input
@@ -147,12 +147,12 @@ export const FinalCTA: React.FC = () => {
                     onChange={handleChange}
                     placeholder="e.g. Alex Morgan"
                     disabled={loading}
-                    className="w-full px-4.5 py-3.5 rounded-xl bg-slate-50/80 border border-slate-200 text-base text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary focus:bg-white transition-all shadow-sm"
+                    className="w-full px-3.5 sm:px-4.5 py-2.5 sm:py-3.5 rounded-xl bg-slate-50/80 border border-slate-200 text-xs sm:text-sm md:text-base placeholder:text-xs sm:placeholder:text-sm md:placeholder:text-base text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary focus:bg-white transition-all shadow-sm"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-extrabold text-slate-900 mb-2 uppercase tracking-wider">
+                  <label className="block text-[10px] sm:text-xs font-extrabold text-slate-900 mb-1.5 sm:mb-2 uppercase tracking-wider">
                     Work Email <span className="text-rose-500">*</span>
                   </label>
                   <input
@@ -162,12 +162,12 @@ export const FinalCTA: React.FC = () => {
                     onChange={handleChange}
                     placeholder="alex@company.com"
                     disabled={loading}
-                    className="w-full px-4.5 py-3.5 rounded-xl bg-slate-50/80 border border-slate-200 text-base text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary focus:bg-white transition-all shadow-sm"
+                    className="w-full px-3.5 sm:px-4.5 py-2.5 sm:py-3.5 rounded-xl bg-slate-50/80 border border-slate-200 text-xs sm:text-sm md:text-base placeholder:text-xs sm:placeholder:text-sm md:placeholder:text-base text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary focus:bg-white transition-all shadow-sm"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-extrabold text-slate-900 mb-2 uppercase tracking-wider">
+                  <label className="block text-[10px] sm:text-xs font-extrabold text-slate-900 mb-1.5 sm:mb-2 uppercase tracking-wider">
                     Company Name <span className="text-rose-500">*</span>
                   </label>
                   <input
@@ -177,7 +177,7 @@ export const FinalCTA: React.FC = () => {
                     onChange={handleChange}
                     placeholder="e.g. Acme Tech Solutions"
                     disabled={loading}
-                    className="w-full px-4.5 py-3.5 rounded-xl bg-slate-50/80 border border-slate-200 text-base text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary focus:bg-white transition-all shadow-sm"
+                    className="w-full px-3.5 sm:px-4.5 py-2.5 sm:py-3.5 rounded-xl bg-slate-50/80 border border-slate-200 text-xs sm:text-sm md:text-base placeholder:text-xs sm:placeholder:text-sm md:placeholder:text-base text-slate-900 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-primary/25 focus:border-primary focus:bg-white transition-all shadow-sm"
                   />
                 </div>
 
@@ -186,21 +186,21 @@ export const FinalCTA: React.FC = () => {
                   whileTap={{ scale: 0.95 }}
                   type="submit"
                   disabled={loading}
-                  className="w-full py-4 px-6 rounded-xl bg-primary text-white text-base font-bold shadow-lg shadow-primary/25 hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/35 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-3"
+                  className="w-full py-3 sm:py-4 px-4 sm:px-6 rounded-xl bg-primary text-white text-xs sm:text-sm md:text-base font-bold shadow-lg shadow-primary/25 hover:bg-primary-hover hover:shadow-xl hover:shadow-primary/35 transition-all duration-300 flex items-center justify-center gap-2 disabled:opacity-70 disabled:cursor-not-allowed mt-3"
                 >
                   {loading ? (
                     <>
-                      <Loader2 className="w-5 h-5 animate-spin" />
+                      <Loader2 className="w-4 h-4 sm:w-5 sm:h-5 animate-spin" />
                       <span>Registering your team...</span>
                     </>
                   ) : (
                     <>
                       <span>Join Priority Waitlist</span>
-                      <Send className="w-4 h-4" />
+                      <Send className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                     </>
                   )}
                 </motion.button>
-                <p className="text-center text-xs text-slate-500 pt-1">
+                <p className="text-center text-[10px] sm:text-xs text-slate-500 pt-1">
                   🔒 No credit card required. Zero spam policy.
                 </p>
               </motion.form>

@@ -40,7 +40,7 @@ export const Testimonials: React.FC = () => {
     <section id="testimonials" className="py-16 md:py-20 bg-white relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+      
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -59,7 +59,6 @@ export const Testimonials: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Testimonials Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {reviews.map((rev, idx) => (
             <motion.div
@@ -72,7 +71,6 @@ export const Testimonials: React.FC = () => {
               className="p-8 sm:p-9 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-2xl hover:border-slate-300 transition-all duration-300 flex flex-col justify-between"
             >
               <div className="space-y-4">
-                {/* 5-Star Rating */}
                 <div className="flex items-center gap-1 text-amber-400">
                   {Array.from({ length: rev.rating }).map((_, i) => (
                     <Star key={i} className="w-4 h-4 fill-current" />
@@ -84,7 +82,6 @@ export const Testimonials: React.FC = () => {
                 </p>
               </div>
 
-              {/* Author Info */}
               <div className="flex items-center gap-3 pt-6 mt-6 border-t border-slate-200/60">
                 <div className={`w-11 h-11 rounded-full ${rev.avatarBg} text-white font-extrabold text-xs flex items-center justify-center shadow-md`}>
                   {rev.initials}

@@ -16,10 +16,10 @@ export function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-dark">
-      {/* Navbar */}
+    
       <Navbar currentView={currentView} setCurrentView={setCurrentView} />
 
-      {/* Main View Router */}
+   
       <main className="flex-grow">
         {currentView === 'landing' ? (
           <>
@@ -37,7 +37,7 @@ export function App() {
         )}
       </main>
 
-      {/* Footer */}
+     
       <Footer />
     </div>
   );

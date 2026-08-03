@@ -22,7 +22,7 @@ import {
 export const DashboardShowcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState<'kanban' | 'analytics' | 'calendar' | 'activity'>('kanban');
 
-  // Kanban Tasks State
+ 
   const [tasks, setTasks] = useState([
     { id: '1', title: 'Implement OAuth 2.0 Provider', column: 'todo', tag: 'Backend', priority: 'High', assignee: 'Alex', avatarBg: 'bg-indigo-600', aiStatus: 'Estimated 3.5h' },
     { id: '2', title: 'Design Glassmorphic Modal Component', column: 'in_progress', tag: 'UI/UX', priority: 'Medium', assignee: 'Sarah', avatarBg: 'bg-purple-600', aiStatus: '92% Quality Match' },
@@ -41,7 +41,7 @@ export const DashboardShowcase: React.FC = () => {
     <section id="showcase" className="py-16 md:py-20 bg-slate-50 border-y border-slate-200/80 relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+        
         <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -61,7 +61,7 @@ export const DashboardShowcase: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* Dashboard Frame Container */}
+        
         <motion.div
           initial={{ opacity: 0, y: 40, scale: 0.98 }}
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
@@ -70,7 +70,7 @@ export const DashboardShowcase: React.FC = () => {
           className="rounded-3xl bg-white border border-slate-200/80 shadow-xl overflow-hidden"
         >
           
-          {/* Top Bar of Dashboard */}
+         
           <div className="bg-slate-900 text-white p-4 sm:px-6 flex flex-wrap items-center justify-between gap-4 border-b border-slate-800">
             <div className="flex items-center gap-4">
               <div className="flex items-center gap-2">
@@ -82,7 +82,7 @@ export const DashboardShowcase: React.FC = () => {
               
               <div className="h-4 w-px bg-slate-700 hidden sm:block" />
 
-              {/* View Selector Tabs */}
+             
               <div className="flex items-center gap-1 bg-slate-800/80 p-1 rounded-lg text-xs">
                 <button
                   onClick={() => setActiveTab('kanban')}
@@ -140,7 +140,7 @@ export const DashboardShowcase: React.FC = () => {
             </div>
           </div>
 
-          {/* Quick Metrics Header Row */}
+        
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 p-4 sm:px-6 bg-surface border-b border-border">
             <div className="p-3 bg-white rounded-xl border border-border/80 flex items-center justify-between">
               <div>
@@ -183,7 +183,7 @@ export const DashboardShowcase: React.FC = () => {
             </div>
           </div>
 
-          {/* Main Display Body based on Active Tab */}
+         
           <div className="p-6 min-h-[420px]">
             <AnimatePresence mode="wait">
               {activeTab === 'kanban' && (
@@ -243,7 +243,7 @@ export const DashboardShowcase: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Column 2: In Progress */}
+               
                   <div className="bg-surface p-4 rounded-xl border border-border/80 space-y-3">
                     <div className="flex items-center justify-between pb-2 border-b border-border">
                       <div className="flex items-center gap-2">
@@ -294,7 +294,7 @@ export const DashboardShowcase: React.FC = () => {
                     </div>
                   </div>
 
-                  {/* Column 3: Completed */}
+              
                   <div className="bg-surface p-4 rounded-xl border border-border/80 space-y-3">
                     <div className="flex items-center justify-between pb-2 border-b border-border">
                       <div className="flex items-center gap-2">
@@ -344,7 +344,7 @@ export const DashboardShowcase: React.FC = () => {
                   className="space-y-6"
                 >
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Burnup Chart Mock */}
+                  
                     <div className="p-5 rounded-xl bg-white border border-border/80 space-y-4">
                       <div className="flex items-center justify-between">
                         <div>
@@ -368,8 +368,7 @@ export const DashboardShowcase: React.FC = () => {
                       </div>
                     </div>
 
-                    {/* Cycle Time Distribution */}
-                    <div className="p-5 rounded-xl bg-white border border-border/80 space-y-4">
+                                     <div className="p-5 rounded-xl bg-white border border-border/80 space-y-4">
                       <div className="flex items-center justify-between">
                         <div>
                           <h4 className="text-sm font-bold text-dark">Average Task Cycle Time</h4>

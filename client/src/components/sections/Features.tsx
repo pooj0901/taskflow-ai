@@ -46,7 +46,7 @@ export const Features: React.FC = () => {
     <section id="features" className="py-16 md:py-20 bg-white relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
+      
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -66,7 +66,7 @@ export const Features: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* 4 Feature Cards Grid */}
+    
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {featureList.map((feature, index) => {
             const Icon = feature.icon;
@@ -80,11 +80,11 @@ export const Features: React.FC = () => {
                 whileHover={{ y: -6 }}
                 className="group relative p-8 sm:p-9 rounded-3xl bg-white border border-slate-200/80 shadow-sm hover:shadow-2xl hover:border-primary/30 transition-all duration-300 flex flex-col justify-between overflow-hidden"
               >
-                {/* Background Gradient Blob */}
+              
                 <div className={`absolute top-0 right-0 w-64 h-64 bg-gradient-to-bl ${feature.gradient} blur-3xl rounded-full opacity-60 group-hover:opacity-100 transition-opacity pointer-events-none -z-10`} />
 
                 <div>
-                  {/* Top Bar inside card */}
+                
                   <div className="flex items-center justify-between mb-6">
                     <div className={`w-12 h-12 rounded-2xl bg-surface border border-slate-200/80 flex items-center justify-center ${feature.color} shadow-sm group-hover:scale-105 transition-transform duration-300`}>
                       <Icon className="w-6 h-6" />
@@ -94,7 +94,7 @@ export const Features: React.FC = () => {
                     </span>
                   </div>
 
-                  {/* Title & Description */}
+               
                   <h3 className="text-2xl font-bold text-slate-900 mb-3 group-hover:text-primary transition-colors flex items-center gap-2">
                     {feature.title}
                   </h3>
@@ -103,7 +103,7 @@ export const Features: React.FC = () => {
                   </p>
                 </div>
 
-                {/* Card Action Link */}
+              
                 <div className="pt-6 mt-6 border-t border-slate-200/60 flex items-center text-xs font-bold text-primary opacity-90 group-hover:opacity-100">
                   <span>Explore Feature</span>
                   <ArrowUpRight className="w-4 h-4 ml-1 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />

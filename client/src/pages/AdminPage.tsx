@@ -89,7 +89,7 @@ export const AdminPage: React.FC = () => {
     <div className="pt-28 pb-20 min-h-screen bg-surface">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         
-        {/* Admin Header */}
+       
         <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 bg-white p-6 rounded-2xl border border-border shadow-subtle">
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-wider mb-2">
@@ -132,7 +132,7 @@ export const AdminPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Stats Row */}
+       
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="p-5 rounded-2xl bg-white border border-border shadow-subtle flex items-center justify-between">
             <div>
@@ -169,9 +169,9 @@ export const AdminPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Table Filter Control Bar */}
+        
         <div className="p-4 rounded-2xl bg-white border border-border shadow-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
-          {/* Search Input */}
+          
           <div className="relative w-full sm:w-96">
             <Search className="w-4 h-4 absolute left-3.5 top-3 text-secondary" />
             <input
@@ -188,7 +188,7 @@ export const AdminPage: React.FC = () => {
           </div>
         </div>
 
-        {/* Main Table Container */}
+        
         <div className="rounded-2xl bg-white border border-border shadow-card overflow-hidden">
           {loading ? (
             <div className="p-12 text-center text-secondary text-xs flex flex-col items-center gap-3">
@@ -236,25 +236,25 @@ export const AdminPage: React.FC = () => {
                 <tbody className="divide-y divide-border text-xs">
                   {filteredEntries.map((entry) => (
                     <tr key={entry.id || entry.email} className="hover:bg-surface/50 transition-colors">
-                      {/* Name & Email */}
+                    
                       <td className="py-4 px-6">
                         <div className="flex items-center gap-3">
                           <div className="w-8 h-8 rounded-full bg-primary/10 text-primary font-bold flex items-center justify-center text-xs">
-                            {entry.name[0]?.toUpperCase()}
+{entry.name?.charAt(0)?.toUpperCase() || "?"}
                           </div>
                           <div>
                             <p className="font-bold text-dark">{entry.name}</p>
-                            <p className="text-[11px] text-secondary font-mono">{entry.email}</p>
+                            <p className="text-[11px] text-secondary font-mono">{entry.email || "-"}</p>
                           </div>
                         </div>
                       </td>
 
-                      {/* Company */}
+                    
                       <td className="py-4 px-6 font-semibold text-slate-800">
-                        {entry.company}
+                    {entry.company || "-"}
                       </td>
 
-                      {/* Status */}
+                    
                       <td className="py-4 px-6">
                         <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-[10px] font-bold">
                           <CheckCircle2 className="w-3 h-3 text-emerald-500" />
@@ -262,7 +262,7 @@ export const AdminPage: React.FC = () => {
                         </span>
                       </td>
 
-                      {/* Date */}
+                    
                       <td className="py-4 px-6 text-secondary font-mono text-[11px]">
                         {new Date(entry.createdAt).toLocaleString(undefined, {
                           dateStyle: 'medium',

@@ -1,12 +1,16 @@
 import axios from 'axios';
 import { WaitlistFormData, WaitlistEntry, ApiResponse } from '../types/waitlist';
 
-const API_BASE =
-  import.meta.env.VITE_API_URL ||
-  "https://taskflow-ai-jmqh.onrender.com";
+const getApiBaseUrl = () => {
+  const envUrl = import.meta.env.VITE_API_URL;
+  if (envUrl) {
+    return envUrl.endsWith('/api') ? envUrl : `${envUrl.replace(/\/$/, '')}/api`;
+  }
+  return "https://taskflow-ai-jmqh.onrender.com/api";
+};
 
 const apiClient = axios.create({
-  baseURL: API_BASE,
+  baseURL: getApiBaseUrl(),
   headers: {
     "Content-Type": "application/json",
   },

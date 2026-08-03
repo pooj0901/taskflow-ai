@@ -46,7 +46,7 @@ export const WhyChooseUs: React.FC = () => {
     <section id="why-us" className="py-16 md:py-20 bg-white border-b border-slate-200/80 relative overflow-hidden">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
+       
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -65,8 +65,7 @@ export const WhyChooseUs: React.FC = () => {
           </p>
         </motion.div>
 
-        {/* 3 Columns Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
           {columns.map((col, idx) => {
             const Icon = col.icon;
             return (
